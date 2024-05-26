@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Todo extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'is_complete' => 'boolean'
+    ];
 
     protected $guarded = ['id'];
 
